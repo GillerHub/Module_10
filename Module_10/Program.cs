@@ -45,6 +45,7 @@ namespace Test
             }
             catch (Exception ex)
             {
+                Console.BackgroundColor = ConsoleColor.Red;
                 if (ex is FormatException) Console.WriteLine("Введено некорректное значение");
                 else Console.WriteLine("Произошла непредвиденная ошибка в приложении");
                 a = 0;
@@ -52,6 +53,8 @@ namespace Test
             }
             finally
             {
+                Console.BackgroundColor = ConsoleColor.Cyan;
+                Console.ForegroundColor = ConsoleColor.Black;
                 Console.WriteLine("Блок Finally сработал!");
             }
             return (a, b);
